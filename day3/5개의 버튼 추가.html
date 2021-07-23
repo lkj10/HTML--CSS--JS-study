@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const body = document.querySelector("body");
+        for(let i = 0; i < 5; i++){
+            const button = document.createElement('button');
+            // const buttonText = document.createTextNode("버튼"+(i+1));
+            // button.append(buttonText);
+            // button.setAttribute("class", "button-"+i);
+            // button.setAttribute("onclick", BBQ());
+            // body.append(button);
+            button.textContent = "버튼 " + String(i+1);
+            body.append(button);
+        }
+        // const buttons = document.querySelectorAll("button");
+
+        // for(let i = 0; i < buttons.length; i++){
+        //     buttons[i].addEventListener("click", function(){
+        //         alert("안녕" + buttons[i].textContent);
+        //     })
+        // }
+
+        body.addEventListener("click", function(e){
+            console.log(e.target);
+            console.log(e.target.nodeName)
+            if(e.target.nodeName === "BUTTON"){
+                alert('안녕' + e.target.textContent);
+                // `${javascript를 넣을 수 있다}`
+            }
+        })
+
+    </script>
+</body>
+</html>

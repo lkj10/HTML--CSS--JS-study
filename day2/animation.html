@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes ani{
+            /* 0%와 100%만 존재한다면 from to로 대체가 가능 */
+            0%{
+                background: black;
+            }
+            50%{ background: red;
+            }
+            100%{
+                background: blue;
+                transform: rotate(150deg);
+            }
+        }
+        .box{
+            width: 180px;
+            height: 180px;
+            background-color: green;
+            /* alternate 앞으로 갔다가 뒤로 갔다가 */
+            /* backwords : 애니메이션이 시작하기 전에 끝날 때 값을 가진 채로 시작
+            forwords: 애니메이션이 끝났을 때 그때의 모습을 유지함 
+            both : backwords를 forwards 옵션 둘 다 사용*/
+            animation: ani infinite 2s alternate forwards;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

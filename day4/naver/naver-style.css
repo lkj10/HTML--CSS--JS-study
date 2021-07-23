@@ -1,0 +1,95 @@
+*{
+    /* border-box: width와 height 값이 border까지 포함시킨다 
+    ex) width: 100px이라고 하면 border-box인 경우에는 border 3px solid back; width: 100px;
+    기본값 content-box는 사실상 100px + 각 모서리 3px씩 늘어납니다.*/
+    box-sizing: border-box;
+}
+
+.header-nav{
+    display: flex;
+    margin-right: auto;
+    padding: 0;
+}
+
+.header-nav-list-wrapper{
+    /* 리스트 앞 숫자나 닷을 없애줌. */
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.hamburger{
+    margin-right: auto;
+}
+
+.main-container{
+    position: absolute;
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.search-section{
+    position: relative;
+    margin: 20px auto 0 auto;
+}
+
+#search-input{
+    height: 55px;
+    width: 500px;
+    border: 2px solid rgb(139, 199, 139);
+    padding-left: 40px;
+    font-size: 18px;
+    
+}
+
+#search-input:focus{
+    outline: none;
+}
+
+.bookmark-section{
+    margin-top: 40px;
+    min-width: 430px;
+    max-width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.bookmark-item{
+    margin-top: 30px;
+    width: 112px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.bookmark-item:hover{
+    opacity: 0.5;
+}
+
+.img-icon-wrapper{
+    width: 60px;
+    height: 60px;
+    border-radius: 20px;
+    background-color: #f2f2f3;
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-icon-wrapper>img{
+    width: 60%;
+    height: 60%;
+}
+
+.bookmark-text{
+    margin-top: 5px;
+    color: #000;
+    font-size: 12px;
+}

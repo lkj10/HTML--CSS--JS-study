@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>회원가입 양식 만들기</h1>
+    <!-- 아이디 + 비밀번호를 서버에 보내는 역할.
+         폼 태그로 감싸면 서버에 보낼 수 있다.-->
+    <form>
+        이름 <input type="text">
+        <br>
+        아이디 <input type="text">
+        <br>
+        비밀번호 <input type="password">
+        <br>
+        date <input type="date">
+        <br>
+        range <input type="range">
+        <br>
+        color : <input type="color">
+        <br>
+        file <input type="file">
+        <br>
+        <input type="button" value="버튼">
+        <br>
+        <!-- 라디오 버튼 -->
+        <input type="radio" name="gender" value="남">남
+        <input type="radio" name="gender" value="여">여
+        <br>
+        취미 <select name="Hobby">
+            <option value="">코딩하기</option>
+            <option value="">책 읽기</option>
+            <option value="">맛집 탐방</option>
+        </select>
+        <br>
+        <input type="submit" value="제출하기">
+
+    </form>
+</body>
+</html>

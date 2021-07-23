@@ -1,0 +1,149 @@
+*{
+    /* border-box: width와 height 값이 border까지 포함시킨다 
+    ex) width: 100px이라고 하면 border-box인 경우에는 border 3px solid back; width: 100px;
+    기본값 content-box는 사실상 100px + 각 모서리 3px씩 늘어납니다.*/
+    box-sizing: border-box;
+}
+
+.body-background{
+    background-color: #fff;
+}
+
+.header-nav{
+    display: flex;
+}
+
+.header-nav-list-wrapper{
+    /* 리스트 앞 숫자나 닷을 없애줌. */
+    list-style: none; 
+    padding: 0;
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+}
+.header-nav-list-wrapper > li{
+    margin-left: 10px;
+}
+
+.toggle-button{
+    background-color: #000;
+    color: white;
+    padding: 5px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* 헤더부분 */
+
+.main-container{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+}
+
+.image-logo{
+    width: 272px;
+}
+
+
+
+.search-section{
+    position: relative;
+    margin: 50px auto 0 auto;
+}
+
+#search-input{
+    height: 44px;
+    width: 100%;
+    border-radius: 50px;
+    border: 1px solid #dddddd;
+    padding-left: 40px;
+}
+
+#search-input:focus{
+    outline: none;
+}
+
+.search-icon{
+    position: absolute;
+    top: 13px;
+    left: 10px;
+    width: 17px;
+}
+
+
+/* 검색 부분 */
+
+.bookmark-section{
+    margin-top: 40px;
+    min-width: 430px;
+    max-width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.bookmark-item{
+    margin-top: 30px;
+    width: 112px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.bookmark-item:hover{
+    opacity: 0.5;
+}
+
+.img-icon-wrapper{
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    background-color: #f2f3f5;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-icon-wrapper>img{
+    width: 60%;
+    height: 60%;
+}
+
+.bookmark-text{
+    margin-top: 5px;
+    color: #000;
+}
+/* 북마크 부분 */
+
+/* 메인 부분 */
+
+/* 클릭 이벤트시 다크모드를 위한 CSS모음 */
+.body-background-darkmode{
+    background-color: #000;
+}
+
+
+.toggle-button-darkmode{
+    background-color: #fff;
+    color: #000;
+}
+
+.bookmark-item-darkmode{
+    background-color: #000;
+}
+
+.img-icon-wrapper-darkmode{
+    background-color: #fff;
+}
+
+.text-darkmode{
+    color: #fff;
+}

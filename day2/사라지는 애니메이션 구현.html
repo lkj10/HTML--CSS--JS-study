@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes ani {
+            from{
+                opacity: 1;
+            }
+            to{
+                opacity: 0;
+            }
+            
+        }
+        .box-wrapper{
+            display: flex;
+        }
+        .box{
+            width: 300px;
+            height: 300px;
+            background: blue;
+        }
+        .box1{
+            animation: ani infinite 2s backwards;
+        }
+    </style>
+</head>
+<body>
+    <div class="box-wrapper">
+        <div class="box box0"></div>
+        <div class="box box1"></div>
+        <div class="box box0"></div>
+        <div class="box box1"></div>
+        <div class="box box0"></div>
+        <div class="box box1"></div>
+    </div>
+</body>
+</html>

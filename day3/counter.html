@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    첫번째 카운터 : <input type="button" value="1" class="a" />
+    두번째 카운터 : <input type="button" value="1" class="a" />
+
+    <script>
+        /*
+        const inputs = document.querySelectorAll("input");
+
+        for(let i = 0; i < inputs.length; i++){
+            inputs[i].addEventListener('click', function(e){
+                console.log(e);
+                //실제 이벤트가 발생하는 위치 (내가 클릭한 요소)
+                console.log(e.target.value);
+                //이벤트가 걸려있는 위치를 반환
+                console.log(e.currentTarget.value);
+                e.target.value++;
+            })
+        }*/
+        // 이벤트 위임을 위한 리팩토링
+
+        const body = document.querySelector("body");
+        body.addEventListener('click', function(e){
+            console.log(e.target);
+            console.log(e.currentTarget);
+            // undefined, null, "". false => 이 4가지는 부정의 의미
+            console.log(e.target.getAttribute("class"));
+            const data = e.target.getAttribute('class')
+            // if(data == undefined || data == null || data == "" || data == false){
+
+            // }
+
+            if(!data){
+                console.log("test")
+
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .a-wrapper{
+            display: flex;
+            height: 300px;
+            /* 메인 축을 조정하는 속성 */
+            justify-content: center;
+            /* 앞 뒤 요소까지 모두 여유 공간을 두고 배치 */
+            justify-content: space-around;
+            /*  */
+            justify-content: space-between;
+            /* 교차 축 정렬 align-items*/
+            align-items: center;
+
+            /* 축을 뒤집을 때 사용하는 것 */
+            flex-direction: column;
+
+            
+        }
+
+        .box{
+            width: 80px;
+            height: 80px;
+            border: 1px solid blue;
+            background-color: red;
+        }
+        .b-wrapper{
+
+        }
+        .box1{
+            width: 80px;
+            height: 80px;
+            border: 1px solid blue;
+            background-color: red;
+        }
+        .b-wrapper{
+            margin-top: 40px;
+            display: flex;
+            /* 기본축 */
+            flex-direction: row;
+            background-color: black;
+            height: 300px;
+            justify-content: space-between;
+            /* 해당 속성을 주게 되면 항목들이 여러형으로 나열됩 */
+            flex-wrap: wrap;
+        }
+        .c-wrapper{
+            margin-top: 40px;
+            display: flex;
+            height: 400px;
+            background-color: blue;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .boxa{
+            flex:1;
+            background-color: red;
+        }
+        .boxb{
+            flex:3;
+            background-color: green;
+        }
+        .boxc{
+            flex:2;
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- div>div*5 -->
+    <div class = "a-wrapper">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+    </div>
+    <div class="b-wrapper">
+        <div class="box1">b</div>
+        <div class="box1">b</div>
+        <div class="box1">b</div>
+        <div class="box1">b</div>
+        <div class="box1">b</div>
+        <div class="box1">b</div>
+        <div class="box1">b</div>
+        <div class="box1">b</div>
+        <div class="box1">b</div>
+        <div class="box1">b</div>
+        <div class="box1">b</div>
+        <div class="box1">b</div>
+        <div class="box1">b</div>
+        <div class="box1">b</div>
+        <div class="box1">b</div>
+        <div class="box1">b</div>
+        <div class="box1">b</div>
+        <div class="box1">b</div>
+        <div class="box1">b</div>
+        <div class="box1">b</div>
+    </div>
+    <div class="c-wrapper">
+        <div class="box1">b</div>
+        <div class="box1">b</div>
+    </div>
+</body>
+</html>

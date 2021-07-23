@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- keydown에 대한 이벤트 -->
+    <input type="text" class="input1" />
+    <div class="result1"></div>
+    <br><br><br>
+
+    <!-- keyup에 대한 이벤트 -->
+    <input type="text" class="input2" />
+    <div class="result2"></div>
+    <br><br><br>
+
+    <script>
+        const inputElementOne = document.querySelector(".input1");
+        const resultOne = document.querySelector(".result1");
+        // 키보드는 keydown 이벤트와 keyup 이벤트가 있다.
+        // keydown 이벤트는 키보드를 눌렀을 때
+        // keypress 이벤트도 있지만 deprecated, 사용되지 않음.
+        // keyup 이벤트는 키보드를 눌렀다 뗐을 때
+        inputElementOne.addEventListener('keydown', function(e){
+            console.log(e.target.value);
+            console.log(e);
+            // resultOne.textContent = e.key;
+            resultOne.textContent += e.code;
+        })
+
+        const inputElementTwo = document.querySelector(".input2");
+        const resultTwo = document.querySelector(".result2");
+
+        inputElementTwo.addEventListener('keyup', function(e){
+            console.log(e.target.value);
+            console.log(e);
+            // resultTwo.textContent = e.key;
+            resultTwo.textContent += e.code;
+        })
+    </script>
+</body>
+</html>
